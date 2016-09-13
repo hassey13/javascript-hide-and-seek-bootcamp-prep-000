@@ -35,12 +35,13 @@ function increaseRankBy(n) {
 // - Define a function `deepestChild()` that pulls out the most deeply nested child from `div#grand-node`. (Remember, you can iterate over elements and call `querySelector()` and `querySelectorAll()` on them. This is challenging to implement correctly, but not beyond your ability!)
 
 function deepestChild() {
-  var start = document.getElementById('grand-node');
-  var next = start.children[0];
+  let node = document.getElementById('grand-node')
+  let nextNode = node.children[0]
 
-  while (next) {
-    start = next
-    next = start.children[0]
+  while (nextNode) {
+    node = nextNode
+    nextNode = node.children[0]
   }
-  return next;
+
+  return node
 }
